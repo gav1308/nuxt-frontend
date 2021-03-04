@@ -1,0 +1,124 @@
+.nav {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  -webkit-box-shadow: 0 1.5px 5px 1.5px rgba(0,0,0,.25);
+  box-shadow: 0 1.5px 5px 1.5px rgba(0,0,0,.25);
+  background-color: #fff;
+  .container{
+    max-width: 100%;
+    padding: 18px 8.25vw;
+    ul.various{
+      li{
+        position: relative;
+        display: inline-block;
+        margin-right: 1.88vw;
+        color: #004408;
+        font-size: 1.25vw;
+        font-weight: 500;
+        display: inline-block;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        .logo-pic{
+          width: 12.5vw;
+        }
+        .arrow{
+          margin-left: 5px;
+          margin-top: -12px;
+        }
+        .dropdown-content{
+          display: none;
+          position: absolute;
+          padding-top: 30px;
+          padding-bottom: 15px;
+          width: 125%;
+          top: 100%;
+          left: -12.5%;
+          background-color: #fff;
+          z-index: 1;
+          a{
+            color: #004408;
+            font-size: 1.15vw;
+            font-weight: 500;
+            padding: 7.5px 5px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            &:hover{
+              color: #9b7f58;
+            }
+          }
+          &::before{
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: calc(100% - 30px);
+            left: 0;
+            bottom: 0;
+            box-shadow: 0 5px 5px .5px rgba(0,0,0,.45);
+          }
+        }
+        &:hover{
+          .dropdown-content {
+            display: block;
+          }
+        }
+        &:nth-child(1){
+          margin-right: 3.4vw;
+        }
+        &:nth-last-child(1){
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.arrow {
+  border: solid #004408;
+  border-width: 0 .2vw .2vw 0;
+  display: inline-block;
+  padding: .295vw;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+// rwd
+@media only screen and (max-width: 1366px) {
+  nav {
+    .container{
+      padding: 18px 3.85vw;
+      ul.various{
+        li{
+          margin-right: 1.8vw;
+          font-size: 1.4vw;
+          &:nth-child(1) {
+            margin-right: 3vw;
+          }
+          .dropdown-content a {
+            font-size: 1.35vw;
+          }
+          .arrow {
+            margin-top: -7px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1023px) {
+ nav{
+   display: none !important;
+ }
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 520px) {
+
+}

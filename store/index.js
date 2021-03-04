@@ -1,26 +1,22 @@
-import test from './test';
-
 export default {
   state() {
     return {
-      mountains: [],
+      unitsize: false,
     }
   },
 
   mutations: {
-    mountains(state, mountains) {
-      state.mountains = mountains;
+    unitsize(state, unitsize) {
+      state.unitsize = unitsize;
     }
 
   },
 
   actions: {
-    mountains({commit}, {mountains}) {
-      commit("mountains", mountains);
+    unitsize({commit}, unitsize) {
+      commit("unitsize", unitsize);
     }
   },
 
-  modules: {
-    test,
-  }
+  modules: {}
 }

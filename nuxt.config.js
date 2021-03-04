@@ -22,16 +22,25 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
-    }]
+    }],
   },
 
   ssr: true,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/style/layout.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{
+    src: '~/plugins/ajax',
+    ssr: true
+  }, {
+    src: '~/plugins/ajax/api',
+    ssr: true
+  },{
+    src: '~/plugins/index.js',
+    ssr: true
+  }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

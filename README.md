@@ -1,4 +1,4 @@
-# pet-web
+#nuxt 試作
 
 ## Build Setup
 
